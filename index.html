@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="ru">
         <meta charset = "utf-8">
         <title>Страница с информацией о мне</title>
         <link rel="stylesheet" href="css/reset.css">
@@ -11,18 +11,18 @@
         <div class="top_menu">
             <div class="top_button">
                 <img src="images/about_me_icon.png" alt="about_me" class="about_me_icon">
-                <span class="top_text in_button">Обо мне</span>
+                <a href="#" class="top_text in_button">Обо мне</a>
             </div>
             <img src="images/hobby_icon.png" alt="hobby" class="hobby_icon">
-            <span class="top_text">Моё хобби</span>
+            <a href="#" class="top_text">Моё хобби</a>
             <img src="images/video_icon.png" alt="video" class="video_icon">
-            <span class="top_text">Любимые фильмы</span>
+            <a href="#" class="top_text">Любимые фильмы</a>
             <div class="clear"></div>
         </div>
         <div class="layer">
-            <img src="images/layer.png" alt="layer">
+            <img src="images/top_image.png" alt="top_image" class="top_image">
+            <div class="overlay"></div>
         </div>
-        <img src="images/top_image.png" alt="top_image" class="top_image">
         <div class="main_container">
             <div class="left_side">
                 <img src="images/my_photo.jpg" alt="my_photo" class="my_photo">
@@ -42,7 +42,7 @@
                 </ol>
             </div>
             <div class="right_side">
-                <blockquote class="citation">Нельзя вернуться в прошлое и изменить свой старт, но можно стартовать сейчас и изменить свой финиш.</blockquote>
+                <blockquote class="citation">Где нет опасности, не может быть и славы.</blockquote>
                 <blockquote class="author">—Roy Jones</blockquote>
                 <h1 class="name">Степанов Владимир</h1>
                 <div class="rectangle"></div>
@@ -85,8 +85,10 @@
             <div class="clear"></div>
         </div>
         <div class="movies_button">
-            <p class="all_movies">Все фильмы</p>
+            <a href="#" class="all_movies">Все фильмы</a>
         </div>
-        <p class="footer">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>
+        <div class="footer">
+            <p class="text_footer">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>
+        </div>
     </body>
 </html>
