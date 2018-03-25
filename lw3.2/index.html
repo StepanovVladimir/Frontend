@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html>
+    <head lang="ru">
         <meta charset = "utf-8">
         <title>Страница с информацией о мне</title>
         <link rel="stylesheet" href="css/reset.css">
@@ -79,6 +79,40 @@
             <div class="clear"></div>
         </div>
         <a href="#" class="all_movies">Все фильмы</a>
+        <div class="write_me_container">
+            <div class="line"></div>
+            <h3 class="write_me_title">НАПИШИ МНЕ</h3>
+            <div class="line"></div>
+            <div class="clear"></div>
+        </div>
+        <form action="php/form_handler" method="get" class="form_container">
+            <label for="name" class="form_caption">Ваше имя</label>
+            <label for="name" class="form_caption star">*</label>
+            <input type="text" name="name" id="name" class="some_form">
+            <label for="email" class="form_caption">Ваш email</label>
+            <label for="email" class="form_caption star">*</label>
+            <input type="text" name="email" id="email" class="some_form">
+            <label for="country" class="form_caption">Откуда вы?</label>
+            <select name="country" id="country" class="some_form select_form">
+                <option value="russia">Россия</option>
+                <option value="belarusian">Белорусь</option>
+                <option value="kazakhstan">Казахстан</option>
+                <option value="ukraine">Украина</option>
+            </select>
+            <p class="form_caption">Ваш пол</p>
+            <label class="radio_form">
+                <input name="gender" type="radio" value="man">
+                Мужской
+            </label>
+            <label class="radio_form">
+                <input name="gender" type="radio" value="woman">
+                Женский
+            </label>
+            <div></div>
+            <label for="message" class="form_caption">Ваше сообщение</label>
+            <label for="message" class="form_caption star">*</label>
+            <textarea id="message" name="message" class="some_form area"></textarea>
+        </form>
         <div class="footer">
             <p class="text_footer">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>
         </div>

@@ -275,6 +275,97 @@ ol
     background-color: #098d71;
 }
 
+.write_me_container
+{
+    width: 700px;
+    margin: 0 auto 0 auto;
+}
+
+.line
+{
+    width: 200px;
+    height: 1px;
+    background-color: #c4c4c4;
+    float: left;
+    margin-top: 22px;
+}
+
+.write_me_title
+{
+    font-size: 36px;
+    line-height: 42px;
+    color: rgb(51,51,51);
+    font-family: "Open Sans";
+    font-weight: 400;
+    float: left;
+    margin: 0 21px 0 21px;
+}
+
+.form_container
+{
+    width: 546px;
+    margin: 0 auto 0 auto;
+}
+
+.form_caption
+{
+    font-size: 20px;
+    line-height: 32px;
+    color: rgb(51,51,51);
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+
+.form_caption.star
+{
+    color: rgb(255,0,0);
+}
+
+.some_form
+{
+    width: 504px;
+    height: 50px;
+    border-radius: 3px;
+    border: 2px solid #c9c9c9;
+    transition: all 0.3s ease;
+    padding: 0 18px 0 18px;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(85,85,85);
+    font-family: "Open Sans";
+}
+
+.some_form:hover
+{
+    border: 2px solid #a5a5a5;
+}
+
+.some_form:focus
+{
+    border: 2px solid #15a98b;
+}
+
+.select_form
+{
+    width: 544px;
+    padding: 0 16px 0 16px;
+}
+
+.radio_form
+{
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(51,51,51);
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+
+.area
+{
+    height: 150px;
+    resize: none;
+}
+
 .footer
 {
     height: 70px;
