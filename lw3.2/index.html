@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-    <head lang="ru">
+<html lang="ru">
+    <head>
         <meta charset = "utf-8">
         <title>Страница с информацией о мне</title>
         <link rel="stylesheet" href="css/reset.css">
@@ -85,7 +85,7 @@
             <div class="line"></div>
             <div class="clear"></div>
         </div>
-        <form action="php/form_handler" method="get" class="form_container">
+        <form action="php/form_handler.php" method="get" class="form_container">
             <label for="name" class="form_caption">Ваше имя</label>
             <label for="name" class="form_caption star">*</label>
             <input type="text" name="name" id="name" class="some_form">
@@ -98,20 +98,23 @@
                 <option value="belarusian">Белорусь</option>
                 <option value="kazakhstan">Казахстан</option>
                 <option value="ukraine">Украина</option>
+                <option value="other">Другое</option>
             </select>
             <p class="form_caption">Ваш пол</p>
-            <label class="radio_form">
-                <input name="gender" type="radio" value="man">
-                Мужской
-            </label>
-            <label class="radio_form">
-                <input name="gender" type="radio" value="woman">
-                Женский
-            </label>
-            <div></div>
+            <div class="radio_form_container">
+                <label class="radio_form">
+                    <input class="radio" name="gender" type="radio" value="man">
+                    Мужской
+                </label>
+                <label class="radio_form last">
+                    <input class="radio" name="gender" type="radio" value="woman">
+                    Женский
+                </label>
+            </div>
             <label for="message" class="form_caption">Ваше сообщение</label>
             <label for="message" class="form_caption star">*</label>
             <textarea id="message" name="message" class="some_form area"></textarea>
+            <input type="submit" value="Отправить" class="submit_form">
         </form>
         <div class="footer">
             <p class="text_footer">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>

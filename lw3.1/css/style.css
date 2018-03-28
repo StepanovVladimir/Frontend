@@ -25,7 +25,7 @@ ol
     margin: 0 auto 0 auto;
 }
 
-.top_menu .top_button
+.top_button
 {
     display: inline-block;
     font-size: 19px;
@@ -35,44 +35,44 @@ ol
     background-repeat: no-repeat;
 }
 
-.top_menu .top_button:hover
+.top_button:hover
 {
     background-color: #15a98c;
     color: rgb(245,245,245);
 }
 
-.top_menu .about_me
+.top_button.about_me
 {
     padding: 16px 20px 15px 45px;
     background-position: 21px 17px;
     background-image: url("../images/about_me_icon.png");
 }
 
-.top_menu .about_me:hover
+.top_button.about_me:hover
 {
     background-image: url("../images/about_me_icon_hover.png");
 }
 
-.top_menu .hobby
+.top_button.hobby
 {
     padding: 16px 22px 15px 43px;
     background-position: 17px 18px;
     background-image: url("../images/hobby_icon.png");
 }
 
-.top_menu .hobby:hover
+.top_button.hobby:hover
 {
     background-image: url("../images/hobby_icon_hover.png");
 }
 
-.top_menu .video
+.top_button.video
 {
     padding: 16px 24px 15px 41px;
     background-position: 15px 17px;
     background-image: url(../images/video_icon.png);
 }
 
-.top_menu .video:hover
+.top_button.video:hover
 {
     background-image: url(../images/video_icon_hover.png);
 }

@@ -25,7 +25,7 @@ ol
     margin: 0 auto 0 auto;
 }
 
-.top_menu .top_button
+.top_button
 {
     display: inline-block;
     font-size: 19px;
@@ -35,44 +35,44 @@ ol
     background-repeat: no-repeat;
 }
 
-.top_menu .top_button:hover
+.top_button:hover
 {
     background-color: #15a98c;
     color: rgb(245,245,245);
 }
 
-.top_menu .about_me
+.top_button.about_me
 {
     padding: 16px 20px 15px 45px;
     background-position: 21px 17px;
     background-image: url("../images/about_me_icon.png");
 }
 
-.top_menu .about_me:hover
+.top_button.about_me:hover
 {
     background-image: url("../images/about_me_icon_hover.png");
 }
 
-.top_menu .hobby
+.top_button.hobby
 {
     padding: 16px 22px 15px 43px;
     background-position: 17px 18px;
     background-image: url("../images/hobby_icon.png");
 }
 
-.top_menu .hobby:hover
+.top_button.hobby:hover
 {
     background-image: url("../images/hobby_icon_hover.png");
 }
 
-.top_menu .video
+.top_button.video
 {
     padding: 16px 24px 15px 41px;
     background-position: 15px 17px;
     background-image: url(../images/video_icon.png);
 }
 
-.top_menu .video:hover
+.top_button.video:hover
 {
     background-image: url(../images/video_icon_hover.png);
 }
@@ -255,19 +255,19 @@ ol
 
 .all_movies
 {
+    display: block;
+    background-color: #15a98b;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0 auto 105px auto;
+    padding-top: 10px;
     font-size: 19px;
     line-height: 32px;
     color: rgb(245,245,245);
     font-family: "Georgia";
     text-decoration: inherit;
     text-align: center;
-    display: block;
-    background-color: #15a98b;
-    width: 220px;
-    height: 40px;
-    padding-top: 10px;
-    border-radius: 5px;
-    margin: 0 auto 70px auto;
 }
 
 .all_movies:hover
@@ -278,7 +278,7 @@ ol
 .write_me_container
 {
     width: 700px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 68px auto;
 }
 
 .line
@@ -287,7 +287,7 @@ ol
     height: 1px;
     background-color: #c4c4c4;
     float: left;
-    margin-top: 22px;
+    margin-top: 21px;
 }
 
 .write_me_title
@@ -323,13 +323,14 @@ ol
 
 .some_form
 {
-    width: 504px;
-    height: 50px;
+    width: 500px;
+    height: 46px;
     border-radius: 3px;
     border: 2px solid #c9c9c9;
     transition: all 0.3s ease;
     padding: 0 18px 0 18px;
-    font-size: 18px;
+    margin: 3px 0 25px 0;
+    font-size: 15px;
     line-height: 32px;
     color: rgb(85,85,85);
     font-family: "Open Sans";
@@ -347,8 +348,16 @@ ol
 
 .select_form
 {
-    width: 544px;
-    padding: 0 16px 0 16px;
+    font-size: 18px;
+    width: 540px;
+    height: 50px;
+    padding-left: 12px;
+    margin-bottom: 40px;
+}
+
+.radio_form_container
+{
+    margin: 3px 0 36px 0;
 }
 
 .radio_form
@@ -358,12 +367,43 @@ ol
     color: rgb(51,51,51);
     font-family: "Open Sans";
     font-weight: 400;
+    margin-right: 35px;
+}
+
+.radio
+{
+    margin-right: 3px;
+}
+
+.radio_form.last
+{
+    margin-right: 0;
 }
 
 .area
 {
-    height: 150px;
+    height: 146px;
     resize: none;
+    margin-bottom: 45px;
+}
+
+.submit_form
+{
+    font-size: 19px;
+    line-height: 32px;
+    color: rgb(245,245,245);
+    font-family: "Georgia";
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98b;
+    transition: all 0.3s ease;
+    margin-bottom: 47px;
+}
+
+.submit_form:hover
+{
+    background-color: #098d71;
 }
 
 .footer
