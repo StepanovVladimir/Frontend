@@ -1,44 +1,80 @@
+function getById(id) {
+    return document.getElementById(id);
+}
+
+function getByClass(className) {
+    return document.getElementsByClassName(className);
+}
+
+function tryToListenId(id, eventName, func) {
+    var el = getById(id);
+    if (el) {
+        el.addEventListener(eventName, func);
+    }
+}
+
+function tryToListenClass(className, eventName, func) {
+    var el = getByClass(className);
+    if (el) {
+        for (var i = 0; i < el.length; i++) {
+            el[i].addEventListener(eventName, func);
+        }
+    }
+}
+
+
 function showWindow() {
-    document.getElementById('window').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
+    getById('window').style.display = 'block';
+    getById('overlay').style.display = 'block';
 }
 
 function closeWindow() {
-    document.getElementById('window').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
+    getById('window').style.display = 'none';
+    getById('overlay').style.display = 'none';
 }
 
-document.getElementById('write_me').addEventListener('click', showWindow);
-document.getElementById('overlay').addEventListener('click', closeWindow);
-document.getElementById('close').addEventListener('click', closeWindow);
 
-document.getElementById('submit_form').addEventListener('click', function(event) {
-    var name = document.getElementById('name');
-    var email = document.getElementById('email');
-    if (name.value == '') {
-        event.preventDefault();
-        name.style.borderColor = 'red';
+function validateForm(event) {
+    var required = getByClass('required');
+    for (var i = 0; i < required.length; i++) {
+        if (required[i].value == '') {
+            event.preventDefault();
+            required[i].classList.add('unfilled_form');
+        }
     }
-    if (email.value == '') {
-        event.preventDefault();
-        email.style.borderColor = 'red';
+}
+
+function focusInForm() {
+    this.classList.remove('unfilled_form');
+}
+
+
+function doOpacity() {
+    var movies = getByClass('hidden_movie');
+    for (var i = 0; i < movies.length; i++) {
+        movies[i].style.opacity = 1;
     }
-});
-
-document.getElementById('name').addEventListener('focus', function() {
-    document.getElementById('name').style.borderColor = null;
-});
-
-document.getElementById('email').addEventListener('focus', function() {
-    document.getElementById('email').style.borderColor = null;
-});
+}
 
 function showMovies() {
-    document.getElementById('all_movies').style.display = 'none';
-    var movie = document.getElementsByClassName('hidden_movie');
-    for (var i = 0; i < movie.length; i++) {
-        movie[i].style.display = 'block';
+    this.style.display = 'none';
+    var movies = getByClass('hidden_movie');
+    for (var i = 0; i < movies.length; i++) {
+        movies[i].style.display = 'block';
     }
+    setTimeout(doOpacity, 0);
 }
 
-document.getElementById('all_movies').addEventListener('click', showMovies);
+
+function onWindowLoaded() {
+    tryToListenId('write_me', 'click', showWindow);
+    tryToListenId('close', 'click', closeWindow);
+    tryToListenId('overlay', 'click', closeWindow);
+    
+    tryToListenId('submit_form', 'click', validateForm);
+    tryToListenClass('required', 'focus', focusInForm);
+    
+    tryToListenId('show_movies', 'click', showMovies);
+}
+
+window.onload = onWindowLoaded;

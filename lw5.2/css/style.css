@@ -500,6 +500,16 @@ ol
     border: 2px solid #15a98b;
 }
 
+.unfilled_form
+{
+    border: 2px solid #f12424;
+}
+
+.unfilled_form:hover
+{
+    border: 2px solid #f12424;
+}
+
 .select_form
 {
     font-size: 18px;
@@ -696,10 +706,12 @@ ol
 
 .hidden_movie
 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
     display: none;
 }
 
-.all_movies
+.show_movies
 {
     display: block;
     background-color: #15a98b;

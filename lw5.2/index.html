@@ -5,7 +5,7 @@
         <title>Страница с информацией о мне</title>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     </head>
     <body>
         <div class="top_menu">
@@ -47,7 +47,7 @@
                 <p class="caption">
                     Я учился в лицее №28. С 4-ого до 9-ого классов я учился на профиле ИКТ(информационные и коммуникационные технологии). В 10-ом классе я перешёл на профиль физмат. Я получил хорошие баллы на ЕГЭ, особенно по физике, и решил дальше учиться на ПС.
                 </p>
-                <span class="link" id="write_me"><span class="text">Напиши мне</span> →</span>
+                <a class="link" id="write_me"><span class="text">Напиши мне</span> →</a>
             </div>
             <div class="clear"></div>
         </div>
@@ -58,10 +58,10 @@
             <form action="php/form_handler.php" method="get" class="form_container">
                 <label for="name" class="form_caption">Ваше имя</label>
                 <label for="name" class="form_caption star">*</label>
-                <input type="text" name="name" id="name" class="some_form">
+                <input type="text" name="name" id="name" class="some_form required">
                 <label for="email" class="form_caption">Ваш email</label>
                 <label for="email" class="form_caption star">*</label>
-                <input type="text" name="email" id="email" class="some_form">
+                <input type="text" name="email" class="some_form required">
                 <label for="country" class="form_caption">Откуда вы?</label>
                 <select name="country" id="country" class="some_form select_form">
                     <option value="russia">Россия</option>
@@ -129,7 +129,7 @@
                 <p class="movie_caption">Доктор Райан Стоун, блестящий специалист в области медицинского инжиниринга, отправляется в свою первую космическую миссию под командованием ветерана астронавтики Мэтта Ковальски, для которого этот полет — последний перед отставкой. Но во время, казалось бы, рутинной работы за бортом случается катастрофа. Шаттл уничтожен, а Стоун и Ковальски остаются совершенно одни; они находятся в связке друг с другом, и все, что они могут, — это двигаться по орбите в абсолютно черном пространстве без всякой связи с Землей и какой-либо надежды на спасение.</p>
             </div>
             <div class="clear"></div>
-            <a class="all_movies" id="all_movies">Все фильмы</a>
+            <a class="show_movies" id="show_movies">Все фильмы</a>
         </div>
         <div class="footer">
             <p class="text_footer">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>
