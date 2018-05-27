@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Страница с информацией о мне</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fm.revealator.jquery.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    </head>
+    <body>
+        <a class="header_button" id="hamburger_menu_button">
+            <div class="hamburger_box" id="hamburger"></div>
+            <p class="menu_box">МЕНЮ</p>
+            <div class="clear"></div>
+        </a>
+        <div class="top_menu" id="data_hamburger_menu">
+            <a class="top_button about_me" href="#about_me">Обо мне</a>
+            <a class="top_button hobby" href="#hobby">Мое хобби</a>
+            <a class="top_button video" href="#video">Любимые фильмы</a>
+            <a class="top_button add" id="add_movie">Добавить фильм</a>
+        </div>
+        <div class="overlay" id="overlay_movie"></div>
+        <div class="window movie" id="window_movie">
+            <img src="images/cross.png" alt="close" class="close" id="close_movie">
+            <p class="write_me_title">Добавить фильм</p>
+            <form action="php/form_handler.php" method="get" class="form_container">
+                <label for="image_url" class="form_caption">URL картинки</label>
+                <label for="image_url" class="form_caption star">*</label>
+                <input type="text" name="image_url" id="image_url" class="some_form movie_form">
+                <label for="film_name" class="form_caption">Название фильма</label>
+                <label for="film_name" class="form_caption star">*</label>
+                <input type="text" name="film_name" id="film_name" class="some_form movie_form">
+                <label for="movie_description" class="form_caption">Описание фильма</label>
+                <label for="movie_description" class="form_caption star">*</label>
+                <textarea id="movie_description" name="movie_description" class="some_form area movie_form"></textarea>
+                <input type="submit" value="Отправить" class="submit_form" id="submit_movie">
+            </form>
+        </div>
+        <div class="top_image"></div>
+        <div class="main_container" id="about_me">
+            <img src="images/my_photo.jpg" alt="my_photo" class="my_photo revealator-slideup revealator-once">
+            <div class="citation_container revealator-slideup revealator-once">
+                <blockquote class="citation">Где нет опасности, не может быть и славы.</blockquote>
+                <blockquote class="author">—Roy Jones</blockquote>
+            </div>
+            <div class="clear"></div>
+            <div class="lists_container">
+                <p class="list_title revealator-slideup revealator-once">Любимые жанры книг</p>
+                <ul class="revealator-slideup revealator-once">
+                    <li>Детективы</li>
+                    <li>Научная фантастика</li>
+                    <li>Антиутопии</li>
+                    <li>Фэнтези</li>
+                </ul>
+                <p class="list_title revealator-slideup revealator-once">Любимые фильмы</p>
+                <ol class="revealator-slideup revealator-once">
+                    <li>Звёздные войны</li>
+                    <li>Пираты карибского моря</li>
+                    <li>Матрица</li>
+                    <li>Назад в будущее</li>
+                </ol>
+            </div>
+            <div class="about_me_container" id="hobby">
+                <h1 class="name revealator-slideup revealator-once">Степанов Владимир</h1>
+                <div class="rectangle revealator-slideup revealator-once"></div>
+                <p class="caption revealator-slideup revealator-once">
+                    Меня зовут Степанов Владимир. Я живу в городе Йошкар-Ола, учусь в ПГТУ на специальности Программная инженерия.
+                </p>
+                <h2 class="subtitle revealator-slideup revealator-once">Где я учился до того как поступил на ФИиВТ</h2>
+                <p class="caption revealator-slideup revealator-once">
+                    Я учился в лицее №28. С 4-ого до 9-ого классов я учился на профиле ИКТ(информационные и коммуникационные технологии). В 10-ом классе я перешёл на профиль физмат. Я получил хорошие баллы на ЕГЭ, особенно по физике, и решил дальше учиться на ПС.
+                </p>
+                <div class="revealator-slideup revealator-once"><a class="link" id="write_me"><span class="text">Напиши мне</span> →</a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="window" id="window">
+            <img src="images/cross.png" alt="close" class="close" id="close">
+            <p class="write_me_title">Напиши мне</p>
+            <form action="php/form_handler.php" method="get" class="form_container">
+                <label for="name" class="form_caption">Ваше имя</label>
+                <label for="name" class="form_caption star">*</label>
+                <input type="text" name="name" id="name" class="some_form required">
+                <label for="email" class="form_caption">Ваш email</label>
+                <label for="email" class="form_caption star">*</label>
+                <input type="text" name="email" id="email" class="some_form required">
+                <label for="country" class="form_caption">Откуда вы?</label>
+                <select name="country" id="country" class="some_form select_form">
+                    <option value="russia">Россия</option>
+                    <option value="belarusian">Белорусь</option>
+                    <option value="kazakhstan">Казахстан</option>
+                    <option value="ukraine">Украина</option>
+                    <option value="other">Другое</option>
+                </select>
+                <p class="form_caption">Ваш пол</p>
+                <div class="radio_form_container">
+                    <label class="radio_form">
+                        <input class="radio" name="gender" type="radio" value="man">
+                        Мужской
+                    </label>
+                    <label class="radio_form last">
+                        <input class="radio" name="gender" type="radio" value="woman">
+                        Женский
+                    </label>
+                </div>
+                <label for="message" class="form_caption">Ваше сообщение</label>
+                <textarea id="message" name="message" class="some_form area"></textarea>
+                <input type="submit" value="Отправить" class="submit_form" id="submit_form">
+            </form>
+        </div>
+        <div class="movies_container" id="video">
+            <h2 class="movies_title revealator-slideup revealator-once">Любимые фильмы</h2>
+            <div id="movies">
+                <div class="movie_container">
+                    <img src="images/star_wars.jpeg" alt="star_wars" class="movie_image revealator-slideup revealator-once">
+                    <h3 class="movie_title revealator-slideup revealator-once">Звёздные войны</h3>
+                    <p class="movie_caption revealator-slideup revealator-once">Культовая фантастическая франшиза в жанре космической оперы, включающая в себя 9 кинофильмов, а также анимационные сериалы, мультфильмы, телефильмы, книги, комиксы, видеоигры, игрушки и прочие произведения, созданные в рамках единой фантастической Вселенной «Звёздных войн».</p>
+                </div>
+                <div class="movie_container">
+                    <img src="images/pirates_of_the_caribbean.jpg" alt="pirates_of_the_caribbean" class="movie_image revealator-slideup revealator-once">
+                    <h3 class="movie_title revealator-slideup revealator-once">Пираты Карибского моря</h3>
+                    <p class="movie_caption revealator-slideup revealator-once">Серия приключенческих фильмов о пиратах в Карибском море. Главный герой на протяжении всех частей — пиратский капитан Джек Воробей (Джонни Депп). Центральные персонажи — пиратский/британский капитан Гектор Барбосса (Джеффри Раш), пиратский боцман Джошами Гиббс (Кевин МакНелли), кузнец и сын пирата Уилл Тёрнер (Орландо Блум), дочь губернатора Элизабет Суонн (Кира Найтли).</p>
+                </div>
+                <div class="movie_container">
+                    <img src="images/matrix.jpg" alt="matrix" class="movie_image revealator-slideup revealator-once">
+                    <h3 class="movie_title revealator-slideup revealator-once">Матрица</h3>
+                    <p class="movie_caption revealator-slideup revealator-once">Американский научно-фантастический боевик, снятый Эндрю и Лоуренсом Вачовски. Фильм изображает будущее, в котором реальность, существующая для большинства людей, есть в действительности симуляция типа «мозг в колбе», созданная разумными машинами, чтобы подчинить и усмирить человеческое население, в то время как тепло и электрическая активность их тел используются машинами в качестве источника энергии.</p>
+                </div>
+                <div class="movie_container last">
+                    <img src="images/back_to_the_future.jpg" alt="back_to_the_future" class="movie_image revealator-slideup revealator-once">
+                    <h3 class="movie_title revealator-slideup revealator-once">Назад в будущее</h3>
+                    <p class="movie_caption revealator-slideup revealator-once">Научно-фантастический фильм в трёх частях о путешествиях во времени, описывающий альтернативные реальности маленького американского городка Хилл-Вэлли и нескольких проживающих там семей. По сюжету доктор Эмметт Браун 30 лет изобретал машину времени и, наконец, в 1985 году он закончил работу над ней, установив энергетический флюксуатор (в других переводах — потоковый накопитель и поточный конденсатор) в автомобиле DeLorean DMC-12.</p>
+                </div>
+                <div class="movie_container hidden_movie">
+                    <img src="images/martian.jpg" alt="interstellar" class="movie_image">
+                    <h3 class="movie_title">Марсианин</h3>
+                    <p class="movie_caption">Земная экспедиция Ares III, высадившаяся на Марсе в районе Ацидалийской равнины, попадает в песчаную бурю. Группе из шести астронавтов приходится досрочно покинуть планету и отправиться домой. При переходе к взлётной площадке ботаника Марка Уотни сметает элементом спутниковой антенны и уносит бурей. Биомонитор астронавта оказался повреждён. Руководитель миссии Мелисса Льюис, не найдя его и сочтя погибшим, отдаёт приказ на старт.</p>
+                </div>
+                <div class="movie_container hidden_movie">
+                    <img src="images/shawshank_redemption.png" alt="interstellar" class="movie_image">
+                    <h3 class="movie_title">Побег из Шоушенка</h3>
+                    <p class="movie_caption">Успешный банкир Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, вооруженный живым умом и доброй душой, отказывается мириться с приговором судьбы и начинает разрабатывать невероятно дерзкий план своего освобождения.</p>
+                </div>
+                <div class="movie_container hidden_movie">
+                    <img src="images/gravitation.png" alt="interstellar" class="movie_image">
+                    <h3 class="movie_title">Гравитация</h3>
+                    <p class="movie_caption">Доктор Райан Стоун, блестящий специалист в области медицинского инжиниринга, отправляется в свою первую космическую миссию под командованием ветерана астронавтики Мэтта Ковальски, для которого этот полет — последний перед отставкой. Но во время, казалось бы, рутинной работы за бортом случается катастрофа. Шаттл уничтожен, а Стоун и Ковальски остаются совершенно одни; они находятся в связке друг с другом, и все, что они могут, — это двигаться по орбите в абсолютно черном пространстве без всякой связи с Землей и какой-либо надежды на спасение.</p>
+                </div>
+                <div class="movie_container hidden_movie last">
+                    <img src="images/interstellar.jpg" alt="interstellar" class="movie_image">
+                    <h3 class="movie_title">Интерстеллар</h3>
+                    <p class="movie_caption">В недалёком будущем из-за развития патогенных бактерий концентрация кислорода в атмосфере Земли необратимо падает, что вызывает ухудшение климата и грозит неминуемой гибелью человечества. Бывший пилот НАСА Купер ведёт фермерское хозяйство со своей семьёй в американской глубинке, страдая от неурожая и пыльных бурь. Его дочь Мёрф рассказывает о том, что её комнату посещает призрак и сбрасывает книги с полки. Купер, разобравшись, понимает, что аномальные явления не выдумка, и даже обнаруживает вместе с дочерью закономерности в действиях призрака. Проанализировав их, он вычисляет координаты некоего объекта, оказавшегося секретным подразделением НАСА.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <a class="show_movies revealator-slideup revealator-once" id="show_movies">Все фильмы</a>
+        </div>
+        <div class="footer">
+            <p class="text_footer">© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»</p>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.smooth-scroll.js"></script>
+        <script src="js/fm.revealator.jquery.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
