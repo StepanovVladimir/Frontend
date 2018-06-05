@@ -158,6 +158,16 @@
     background-image: url(../images/hamburger-hov.png);
 }
 
+.mobile_menu_cross
+{
+    color: #8a8a8a;
+}
+
+.mobile_menu_cross:hover
+{
+    color: #0a0a0a;
+}
+
 .havbar_menu
 {
     margin-left: 65px;
@@ -345,11 +355,6 @@
     background-color: #17a78b!important;
 }
 
-.mobile_mega_menu
-{
-    height: 500px;
-}
-
 @media screen and (min-width: 1024px) and (max-width: 1120px)
 {
     .mega_menu_list_link
@@ -360,18 +365,30 @@
 
 @media screen and (max-width: 1023px)
 {
+    .mobile_menu
+    {
+        height: 500px;
+        transform: translateY(-500px);
+    }
+    
     .havbar_menu
     {
         display: block;
         margin-top: 40px;
-        margin-left: 0;
+        margin-left: 0px;
         float: none;
+    }
+    
+    .havbar_menu_item
+    {
+        border-color: #e6e6e6;
     }
     
     .mega_menu
     {
-        top: 199px;
+        position: static;
         display: none;
+        margin-left: 0;
     }
     
     .mega_menu_button:hover .mega_menu
@@ -872,8 +889,6 @@
 {
     display: block;
     position: relative;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .carousel_info
@@ -953,7 +968,7 @@
 .latest_works_pagination
 {
     margin: auto;
-    width: 65px;
+    width: 90px;
     padding-bottom: 165px;
     padding-left: 10px;
 }
@@ -975,6 +990,11 @@
     .latest_works_pagination
     {
         padding-bottom: 125px;
+    }
+    
+    .carousel_image_name
+    {
+        margin-top: 30%;
     }
 }
 
