@@ -22,8 +22,10 @@ ol
 .header_button
 {
     display: none;
+    position: relative;
+    z-index: 2;
+    background-color: white;
     height: 50px;
-    cursor: pointer;
 }
 
 .hamburger_box
@@ -35,6 +37,7 @@ ol
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 .cross_box
@@ -45,6 +48,7 @@ ol
     background-image: url(../images/cross.png);
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 .menu_box
@@ -61,6 +65,7 @@ ol
 {
     width: 960px;
     margin: 0 auto 0 auto;
+    transition: all 0.3s ease;
 }
 
 .top_button
@@ -73,6 +78,8 @@ ol
     text-decoration: none;
     background-repeat: no-repeat;
     background-position: 18px 17px;
+    background-color: white;
+    cursor: pointer;
 }
 
 .top_button:hover
@@ -304,8 +311,11 @@ ol
     
     .top_menu
     {
-        display: none;
-        width: auto;
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        transform: translateY(-208px);
+        z-index: 1;
     }
     
     .top_button
@@ -404,8 +414,11 @@ ol
     
     .top_menu
     {
-        display: none;
-        width: auto;
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        transform: translateY(-208px);
+        z-index: 1;
     }
     
     .top_button
@@ -812,7 +825,7 @@ ol
     text-align: center;
 }
 
-.all_movies:hover
+.show_movies:hover
 {
     background-color: #098d71;
 }

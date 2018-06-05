@@ -25,12 +25,14 @@ function tryToListenClass(className, eventName, func) {
 function toggleHamburgerMenu() {
     var hamburger = $('#hamburger');
     var menu = $('#data_hamburger_menu');
-    if (menu.css('display') == 'none') {
-        menu.css('display', 'block');
+    if (menu.css('visibility') == 'hidden') {
+        menu.css('visibility', 'visible');
+        menu.css('transform', 'translateY(0)');
         hamburger.removeClass('hamburger_box');
         hamburger.toggleClass('cross_box');
     } else {
-        menu.css('display', 'null');
+        menu.css('transform', 'null');
+        menu.css('visibility', 'null');
         hamburger.removeClass('cross_box');
         hamburger.toggleClass('hamburger_box');
     }
@@ -122,7 +124,7 @@ function showMovies() {
 
 function onWindowLoaded() {
     $('.top_button').smoothScroll();
-    $('#hamburger_menu_button').on('click', toggleHamburgerMenu);
+    $('#hamburger').on('click', toggleHamburgerMenu);
     $('#add_movie').on('click', showMovieForm);
     $('#close_movie').on('click', closeMovieForm);
     $('#overlay_movie').on('click', closeMovieForm);
